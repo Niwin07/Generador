@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Fuerza el modo oscuro por clase para tu botón */
+@variant dark (&:where(.dark, .dark *));
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #ffffff !important;
+  }
+  .dark body {
+    background-color: #0d0d0d !important;
+  }
+}
